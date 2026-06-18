@@ -1,0 +1,93 @@
+PROBLEM 1
+
+// ==========================================
+// PAGE 1 ERRORS
+// ==========================================
+
+int department = 1 // Error: Missing semicolon (;) at the end of the statement.
+int marks = "90";  // Error: Invalid initializer. Cannot assign a string literal (char*) to an int.
+
+int x = 10 // Error: Missing semicolon (;).
+{
+    int x = 20; 
+}
+printf("Inner x = %d\n", x); // Logical Error: This will print the outer x (10), because the inner x went out of scope after the closing brace.
+
+if (x = 10) // Logical Error: Code uses assignment (=) instead of comparison (==). This condition will always evaluate to true.
+
+printf("%d\n", score); // Error: 'score' is undeclared in this scope.
+
+
+// ==========================================
+// PAGE 2 ERRORS
+// ==========================================
+
+printf("Students = %d\n" totalStudents); // Error: Missing comma separating the format string and the variable.
+
+int department = 2; // Error: Redefinition of variable 'department' within the same scope.
+
+int a = 10 // Error: Missing semicolon (;).
+int b = 20 // Error: Missing semicolon (;).
+
+sum = add(a, b); // Error: Implicit declaration of function 'add' (function 'add' is never defined or declared).
+
+int arr[5];
+arr[10] = 100; // Error: Buffer overflow / Array index out of bounds. Valid indices are 0 to 4.
+
+float salary = 50000.50;
+printf("%d\n", salary); // Error: Format specifier mismatch. '%d' is for integers; using it on a float causes undefined behavior. Use '%f'.
+
+
+// ==========================================
+// PAGE 3 ERRORS
+// ==========================================
+
+int count = 10;
+count = count + 5;
+int count = 100; // Error: Redefinition of variable 'count' within the same scope.
+
+for(i = 0; i < 5; i++) {
+    int result = i * 10;
+}
+printf("%d\n", result); // Error: 'result' is undeclared here. It was declared inside the loop's local scope and is now destroyed.
+
+if (age > 18)
+    printf("Eligible\n");
+else
+    printf("Eligible\n"); // Logical Error: Both the 'if' and 'else' branches execute the exact same statement.
+
+int value = 50;
+displayData(); // Error: Too few arguments to function 'displayData'. It expects 1 integer argument.
+
+
+// ==========================================
+// PAGE 4 ERRORS
+// ==========================================
+
+int z = 10;
+while (z > 0); // Error / Infinite Loop: The trailing semicolon creates an empty loop body. 'z--' is never reached, causing a permanent hang.
+{
+}
+z--;
+
+
+// ==========================================
+// PAGE 5 ERRORS
+// ==========================================
+
+char grade = "A"; // Error: Invalid initializer. Double quotes create a string literal (char*). Use single quotes ('A') for a char.
+
+int number = 50;
+printf("%s\n", number); // Error: Format specifier mismatch. '%s' expects a memory address (char*), but receiving an integer (50) will cause a segmentation fault / crash.
+
+int *ptr = NULL;
+*ptr = 100; // Runtime Error: Null pointer dereference. Trying to write to a NULL pointer will instantly crash the program.
+
+average = calculateAverage(10, 20); // Error: Implicit declaration of function 'calculateAverage' (function is undefined).
+
+
+
+
+
+PROBLEM 2
+
